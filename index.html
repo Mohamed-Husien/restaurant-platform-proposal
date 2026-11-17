@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المقترح الفني والمعمارية الهندسية | منظومة إدارة وتشغيل المطاعم ونقاط البيع السحابية</title>
+  
+  <!-- Fonts: Cairo & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Cairo', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .font-latin {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* BiDi Isolation for Phone Numbers and LTR Code */
+    .bidi-isolate, bdi, [dir="ltr"] {
+      direction: ltr !important;
+      unicode-bidi: isolate !important;
+      display: inline-block !important;
+      text-align: left !important;
+    }
+
+    /* Uncopyable and Protected Content */
+    *, html, body {
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
+    }
+
+    /* Clean Word Paper Container */
+    .word-sheet {
+      background: #ffffff;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e2e8f0;
+    }
+
+    /* Print settings for exact Word/PDF export */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 11pt;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .word-sheet {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="py-6 sm:py-12 px-3 sm:px-6 select-none" oncontextmenu="return false;" oncopy="return false;" oncut="return false;" ondragstart="return false;">
+
+  <!-- Global Fixed Watermark (Always visibly centered across all pages while scrolling) -->
+  <div class="fixed inset-0 flex items-center justify-center pointer-events-none select-none z-10 overflow-hidden">
+    <img src="assets/watermark.png" alt="LogicCraft Watermark" class="w-[280px] sm:w-[460px] object-contain opacity-[0.038] mix-blend-multiply">
+  </div>
+
+  <!-- Floating Action Bar (Top Left) -->
+  <div class="fixed top-4 left-4 z-50 flex items-center gap-2 no-print">
+    <a href="https://wa.me/201275566392?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D9%85.%20%D9%85%D8%AD%D9%85%D8%AF%D8%8C%20%D8%A7%D8%B7%D9%84%D8%B9%D8%AA%20%D8%B9%D9%84%D9%89%20%D8%AE%D8%B7%D8%A9%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%20%D9%88%D8%A7%D9%84%D9%85%D8%B9%D9%85%D8%A7%D8%B1%D9%8A%D8%A9%20%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9%20%D9%84%D9%85%D9%86%D8%B8%D9%88%D9%85%D8%A9%20%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B9%D9%85%20%D9%88%D8%A7%D9%84%D9%80%20POS%D8%8C%20%D9%88%D8%AD%D8%A7%D8%A8%D8%A8%20%D9%86%D8%AF%D8%B1%D8%AF%D8%B4%20%D9%81%D9%8A%20%D8%AE%D8%B7%D9%88%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D9%86%D9%81%D9%8A%D8%B0." 
+       target="_blank"
+       class="inline-flex items-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
+      <i data-lucide="message-circle" class="w-4 h-4"></i>
+      <span>دردش مع م. محمد على واتساب</span>
+    </a>
+  </div>
+
+  <!-- Document Paper Container (Word Paper Sheet Style) -->
+  <main class="word-sheet relative overflow-hidden max-w-4xl mx-auto p-4 sm:p-8 md:p-12 rounded-2xl space-y-10">
+
+    <!-- Document Header / Letterhead -->
+    <header class="relative z-10 border-b-2 border-slate-900 pb-6 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="p-1 bg-[#161922] rounded-2xl shadow-md border border-slate-700 shrink-0">
+            <img src="assets/logo.jpg" alt="LogicCraft Logo" class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl object-contain">
+          </div>
+          <div>
+            <div class="text-xs uppercase font-extrabold tracking-wider text-orange-600 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-orange-600 inline-block"></span>
+              المقترح الفني والمعمارية الهندسية الشاملة
+            </div>
+            <h1 class="text-xl sm:text-2xl lg:text-3xl font-black text-slate-900 mt-1">
+              منظومة تشغيل المطاعم ونقاط البيع السحابية (POS & ERP)
+            </h1>
+            <div class="text-xs sm:text-sm font-semibold text-slate-600 mt-0.5 font-latin">
+              Restaurant Operating System, Multi-Branch Cloud POS, KDS & Recipe ERP
+            </div>
+            <div class="text-xs text-slate-500 mt-1">
+              موقع طلب أونلاين + كاشير ديسك توب (Offline-First) + شاشة مطبخ + تطبيق طيار Flutter + مخازن ووصفات
+            </div>
+          </div>
+        </div>
+        <div class="text-right text-xs text-slate-600 space-y-1.5 shrink-0 bg-slate-50 sm:bg-transparent p-3 sm:p-0 rounded-xl border sm:border-0 border-slate-200">
+          <div><span class="text-slate-500 font-medium">رقم المرجع:</span> <span class="font-latin text-slate-900 font-bold" dir="ltr">RST-PRP-2026</span></div>
+          <div><span class="text-slate-500 font-medium">التاريخ:</span> <span class="text-slate-900 font-semibold">18 نوفمبر 2026</span></div>
+          <div><span class="text-slate-500 font-medium">الحالة:</span> <span class="text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">جاهز للمناقشة والاعتماد</span></div>
+        </div>
+      </div>
+
+      <div class="pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-600">
+        <div><strong>إعداد المهندس:</strong> م. محمد حسين — <span class="font-latin font-bold text-slate-900">LogicCraft</span> (استشاري تطوير التطبيقات والحلول السحابية ومهندس معماريات البرمجيات)</div>
+        <div><strong>واتساب مباشر:</strong> <bdi dir="ltr" class="bidi-isolate font-latin text-slate-900 font-bold inline-block">+20 127 556 6392</bdi></div>
+      </div>
+    </header>
+
+    <!-- Section 1: Friendly Introduction -->
+    <section class="relative z-10 space-y-4">
+      <div class="flex items-center gap-2 text-slate-900 font-bold text-lg border-r-4 border-orange-600 pr-3">
+        <span>1. رسالة سريعة من م. محمد (إحنا فهمنا فكرتك إزاي والمعمارية دي رايحة فين)</span>
+      </div>
+      
+      <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+        <p>
+          بص يا هندسة، السلام عليكم ورحمة الله. بعد ما درست متطلبات المنظومة بتفاصيلها الـ 5 اللي بعتهالي، حابب أقولك إنك هنا مش بتطلب مجرد موقع منيو للطلب أونلاين زي آلاف المواقع العادية، 
+          <strong>إنت بتطلب بناء "منظومة تشغيل وإدارة مطاعم متكاملة" (Restaurant Operating System & Cloud-POS Ecosystem)</strong> بمستوى حلول رائدة في السوق زي <span class="font-bold text-slate-900 font-latin">Foodics</span> و <span class="font-bold text-slate-900 font-latin">Toast POS</span>، ولكن مدمج معاها منصة طلب دليفري وتتبع حي خاصة بالمطعم بدون ما تدفع نسب وعمولات لتطبيقات التوصيل الخارجية.
+        </p>
+        <p>
+          المشروع ده ذكي جداً واستثماره عالي القيمة؛ لأنه بيقفل الحلقة بالكامل بين: <strong>(العميل اللي بيطلب من البيت) ⬅️ (الكاشير في الصالة) ⬅️ (شاشة المطبخ للشيف) ⬅️ (تطبيق الموبايل للطيار بالـ GPS) ⬅️ (المخزن والوصفات وحسابات الأرباح للمالك)</strong>. 
+          مفيش أوردر هيفلت، مفيش فلوس هتضيع، ومفيش هالك في المواد الخام هيعدي من غير ما يترصد بالجرام.
+        </p>
+        <p class="font-semibold text-slate-900">
+          في الوثيقة دي، فككتلك المعمارية الهندسية الصعبة اللي محتاجة تركيز عالي (وعلى رأسها شغل الـ Offline للكاشير والمزامنة الذكية)، والسيرفيسز اللي هنربطها، وتقدير التكلفة الإجمالي الصادق والمدة الزمنية بدون لف ولا دوران.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Technical Architecture & Toughest Engineering Challenges -->
+    <section class="relative z-10 space-y-4">
+      <div class="flex items-center gap-2 text-slate-900 font-bold text-lg border-r-4 border-orange-600 pr-3">
+        <span>2. المعمارية الهندسية وأخطر التحديات الفنية وإزاي هننفذهم بالملي</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+        
+        <!-- Challenge 1: Offline-First Async POS Engine -->
+        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+          <div class="flex items-center gap-2 text-orange-700 font-bold">
+            <i data-lucide="wifi-off" class="w-5 h-5 shrink-0"></i>
+            <span>1. معمارية الـ Offline-First والتزامن غير المتزامن للكاشير</span>
+          </div>
+          <p class="text-slate-600 leading-relaxed text-xs">
+            <strong>التحدي الهندسي:</strong> المطعم وقت الذروة (الـ Rush Hour) لو النت انقطع، شغل الصالة والكاشير مستحيل يقف ثانية واحدة. مينفعش شاشة الكاشير تطلع "لا يوجد اتصال بالإنترنت".
+          </p>
+          <div class="p-2.5 bg-orange-50/70 border border-orange-100 rounded-lg text-xs text-orange-950 space-y-1">
+            <div><strong>الحل المعماري:</strong> برنامج الكاشير هيتبني بـ <span class="font-latin font-bold">Flutter Desktop/Tablet</span> ومحرك تخزين محلي <span class="font-latin font-bold">SQLite Cache</span>. الكاشير بيضرب الأوردر، يخصم الكمية مؤقتاً، ويطبع الفاتورة للزبون بدون نت نهائياً.</div>
+            <div><strong>فض النزاع (Conflict Resolution):</strong> بنظام الـ <span class="font-latin font-bold">UUID + Sequence Queue</span> أول ما النت يرجع، السيستم بيعمل مزامنة خلفية تلقائية (Async Background Sync) في أجزاء من الثانية مع السيرفر بدون أي تكرار أو تداخل بين الكاشيرات في نفس الفرع.</div>
+          </div>
+        </div>
+
+        <!-- Challenge 2: Recipe Book BOM & Inventory Deduction -->
+        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+          <div class="flex items-center gap-2 text-orange-700 font-bold">
+            <i data-lucide="boxes" class="w-5 h-5 shrink-0"></i>
+            <span>2. كتاب الوصفات ومحرك خصم المخزن اللحظي (Recipe BOM Engine)</span>
+          </div>
+          <p class="text-slate-600 leading-relaxed text-xs">
+            <strong>التحدي الهندسي:</strong> ساندوتش البرجر مثلاً مش صنف مخزني مفرد؛ ده تركيبة من: 150 جم لحم بقري + خبز بريوش + 20 جم صوص سري + شريحة جبنة شيدر.
+          </p>
+          <div class="p-2.5 bg-orange-50/70 border border-orange-100 rounded-lg text-xs text-orange-950 space-y-1">
+            <div><strong>الحل المعماري:</strong> بناء محرك <span class="font-latin font-bold">Bill of Materials (BOM)</span> علائقي في الباك إند، بيقسم المكونات بالوحدات الكسرية (جرام، ملي، حبة). مع كل أوردر بيتباع، السيستم بيخصم الخامات الخام تلقائياً من مخزن الفرع المحدد.</div>
+            <div><strong>حساب التكلفة الحية (Live COGS):</strong> بنحسب تكلفة كل صنف بدقة متناهية، ونطلعلك هامش الربح الصافي وتقارير هالك المواد الخام فوراً.</div>
+          </div>
+        </div>
+
+        <!-- Challenge 3: Real-time Driver GPS Background Tracking -->
+        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+          <div class="flex items-center gap-2 text-orange-700 font-bold">
+            <i data-lucide="navigation" class="w-5 h-5 shrink-0"></i>
+            <span>3. تتبع الطيار بالـ GPS في الخلفية (Background Location Tracking)</span>
+          </div>
+          <p class="text-slate-600 leading-relaxed text-xs">
+            <strong>التحدي الهندسي:</strong> متصفحات الويب على الموبايل مستحيل تقدر تتبع موقع الطيار وهو قافل الشاشة أو الموبايل في جيبه، لأن نظام التشغيل بيوقف المتصفح لتوفير الطاقة.
+          </p>
+          <div class="p-2.5 bg-orange-50/70 border border-orange-100 rounded-lg text-xs text-orange-950 space-y-1">
+            <div><strong>الحل المعماري:</strong> تطبيق أصيل للطيار بـ <span class="font-latin font-bold">Flutter (Android & iOS)</span> مشغل كخدمة في الخلفية (<span class="font-latin font-bold">Native Foreground Service</span>) بقراءة متقطعة ذكية كل 5 إلى 10 ثواني لحفظ بطارية الموبايل.</div>
+            <div><strong>بث فوري للعميل:</strong> نقل الإحداثيات عبر قنوات <span class="font-latin font-bold">WebSockets</span> خفيفة الوزن تظهر للعميل على خريطة حية زي أوبر وطلبات بدون استنزاف كوتا خرائط جوجل.</div>
+          </div>
+        </div>
+
+        <!-- Challenge 4: Real-time Kitchen Display System (KDS) -->
+        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+          <div class="flex items-center gap-2 text-orange-700 font-bold">
+            <i data-lucide="chef-hat" class="w-5 h-5 shrink-0"></i>
+            <span>4. شاشة المطبخ اللحظية (KDS) وتوزيع المحطات</span>
+          </div>
+          <p class="text-slate-600 leading-relaxed text-xs">
+            <strong>التحدي الهندسي:</strong> المطبخ بيئة شغل سريعة ومزدحمة؛ الطباخ محتاج شاشة واضحة الألوان، بدون كيبورد، وبلمسة واحدة ينقل الأوردر من "جاري التجهيز" لـ "جاهز للاستلام".
+          </p>
+          <div class="p-2.5 bg-orange-50/70 border border-orange-100 rounded-lg text-xs text-orange-950 space-y-1">
+            <div><strong>الحل المعماري:</strong> واجهة تابلت/شاشة تفاعلية متصلة بالـ <span class="font-latin font-bold">WebSockets</span> بتعمل تنبيه صوتي وتوهج لوني للأوردرات المتأخرة، مع دعم تقسيم الأوردر حسب محطات المطبخ (Station Routing: الشواية لوحدها، السلطات لوحدها، والمشروبات لوحدها).</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 3: Tools, Servers & Monthly Cost Optimization -->
+    <section class="relative z-10 space-y-4">
+      <div class="flex items-center gap-2 text-slate-900 font-bold text-lg border-r-4 border-orange-600 pr-3">
+        <span>3. التولز والسيرفرات اللي هنحتاجها وإزاي نوفر عليك في مصاريف التشغيل الشهرية</span>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs text-right border-collapse border border-slate-200 rounded-xl overflow-hidden">
+          <thead class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
+            <tr>
+              <th class="p-3 border border-slate-200">الخدمة التقنية</th>
+              <th class="p-3 border border-slate-200">التقنية والأداة المقترحة</th>
+              <th class="p-3 border border-slate-200">الاشتراك الشهري المتوقع</th>
+              <th class="p-3 border border-slate-200">المميزات وقرارنا المعماري</th>
+              <th class="p-3 border border-slate-200">ملاحظات وقيود (Trade-offs)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 bg-white text-slate-700">
+            <!-- Row 1: Backend & DB -->
+            <tr>
+              <td class="p-3 border border-slate-200 font-bold bg-slate-50">الباك إند وقاعدة البيانات</td>
+              <td class="p-3 border border-slate-200 font-latin font-semibold text-orange-700">PostgreSQL + NestJS/Laravel REST API</td>
+              <td class="p-3 border border-slate-200 font-latin">5$ إلى 10$ / شهر (سيرفر VPS)</td>
+              <td class="p-3 border border-slate-200">قواعد بيانات علائقية متوافقة مع معايير ACID؛ تضمن حماية الحسابات المالية وخصومات المخزن الدقيقة وتعدد الفروع.</td>
+              <td class="p-3 border border-slate-200 text-slate-500">يتطلب حماية وتأمين جيد للسيرفر وعمل نسخ احتياطي آلي يومي (بنبرمجها ونجهزها لك بالكامل).</td>
+            </tr>
+
+            <!-- Row 2: Maps & GPS -->
+            <tr>
+              <td class="p-3 border border-slate-200 font-bold bg-slate-50">الخرائط وتتبع الطيارين</td>
+              <td class="p-3 border border-slate-200 font-latin font-semibold text-orange-700">Google Maps API (Places + Routes)</td>
+              <td class="p-3 border border-slate-200 font-latin">0 ج.م شهرياً (ضمن كوتا 200$ مجاناً)</td>
+              <td class="p-3 border border-slate-200">أدق خريطة للمدن والشوارع العربية، سرعة رهيبة في التعرف على العناوين وتوجيه مسار الطيار للفرع والعميل.</td>
+              <td class="p-3 border border-slate-200 text-slate-500">تتطلب وجود بطاقة بنكية لتفعيل الكوتا المجانية لدى Google Cloud؛ استهلاك المنظومة محكوم لتجنب تجاوز الكوتا.</td>
+            </tr>
+
+            <!-- Row 3: Image Storage -->
+            <tr>
+              <td class="p-3 border border-slate-200 font-bold bg-slate-50">تخزين صور الأصناف والمنيو</td>
+              <td class="p-3 border border-slate-200 font-latin font-semibold text-orange-700">Cloudflare R2 Object Storage</td>
+              <td class="p-3 border border-slate-200 font-latin font-bold text-emerald-700">0$ مجاني مدى الحياة (أول 10GB)</td>
+              <td class="p-3 border border-slate-200">أسرع شبكة توزيع محتوى في العالم (CDN)، بدون أي مصاريف باندويث خفية، وسرعة فائقة في فتح صور الوجبات على الموبايل.</td>
+              <td class="p-3 border border-slate-200 text-slate-500">تحذير من استخدام مواقع الرفع العامة الرخيصة لأنها تحذف الصور فجأة وتضر بهوية المطعم.</td>
+            </tr>
+
+            <!-- Row 4: Real-time Engine -->
+            <tr>
+              <td class="p-3 border border-slate-200 font-bold bg-slate-50">التزامن اللحظي وشاشة المطبخ</td>
+              <td class="p-3 border border-slate-200 font-latin font-semibold text-orange-700">WebSockets (Socket.io / Redis PubSub)</td>
+              <td class="p-3 border border-slate-200 font-latin">0$ إضافي (مدمج داخل السيرفر)</td>
+              <td class="p-3 border border-slate-200">استجابة صفرية التأخير بين شاشة الكاشير والمطبخ وتتبع الطيار، بدون الحاجة لاشتراكات خدمات خارجية باهظة كـ Pusher.</td>
+              <td class="p-3 border border-slate-200 text-slate-500">يتطلب ضبط كفاءة الذاكرة (Memory Optimization) على السيرفر لضمان ثبات الاتصال اللحظي.</td>
+            </tr>
+
+            <!-- Row 5: Hardware & Printers -->
+            <tr>
+              <td class="p-3 border border-slate-200 font-bold bg-slate-50">طابعات الفواتير والإيصالات</td>
+              <td class="p-3 border border-slate-200 font-latin font-semibold text-orange-700">ESC/POS Thermal Protocol (USB / LAN)</td>
+              <td class="p-3 border border-slate-200 font-latin">0$ (اتصال محلي مباشر)</td>
+              <td class="p-3 border border-slate-200">دعم كافة أنواع طابعات البونات الحرارية في السوق (Epson, Xprinter وغيرها) وطباعة اللوجو والفاتورة الضريبية فوراً.</td>
+              <td class="p-3 border border-slate-200 text-slate-500">يلزم توصيل الطابعات على نفس شبكة الراوتر المحلية الخاصة بالكاشير والمطبخ.</td>
+            </tr>
+
+            <!-- Row 6: Payments -->
+            <tr>
+              <td class="p-3 border border-slate-200 font-bold bg-slate-50">بوابة الدفع الإلكتروني</td>
+              <td class="p-3 border border-slate-200 font-latin font-semibold text-orange-700">Paymob / Geidea / MyFatoorah</td>
+              <td class="p-3 border border-slate-200">عمولة فقط على كل عملية ناجحة (لا توجد اشتراكات ثابتة)</td>
+              <td class="p-3 border border-slate-200">دعم فيزا، ماستركارد، ومحافظ إلكترونية (فودافون كاش، محفظة البنك) مع أمان كامل 3D Secure.</td>
+              <td class="p-3 border border-slate-200 text-slate-500">يتطلب أوراق تجارية للمطعم (سجل تجاري وبطاقة ضريبية) للتعاقد مع بوابة الدفع.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 4: Deconstructing the 5 Core System Layers -->
+    <section class="relative z-10 space-y-4">
+      <div class="flex items-center gap-2 text-slate-900 font-bold text-lg border-r-4 border-orange-600 pr-3">
+        <span>4. تفكيك المنظومة: المنصات وتجربة كل طرف (The 5 Core Platforms)</span>
+      </div>
+
+      <div class="space-y-3 text-xs sm:text-sm">
+        
+        <!-- Platform 1 -->
+        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col md:flex-row gap-4 items-start">
+          <div class="p-3 bg-orange-100 text-orange-800 rounded-xl font-bold shrink-0 flex items-center gap-2 md:w-48">
+            <i data-lucide="globe" class="w-5 h-5 shrink-0"></i>
+            <span>1. موقع الطلب أونلاين</span>
+          </div>
+          <div class="space-y-1 text-slate-600 leading-relaxed">
+            <div class="font-bold text-slate-900">واجهة الويب للعملاء (Web App - Responsive & Animated)</div>
+            <p>موقع عصري وسريع جداً، داعم للعربية والإنجليزية والوضع الليلي، أنيميشن سلس يبرز هوية المطعم، منيو مقسم بتصنيفات واضحة، صفحة تفصيلية لكل وجبة مع الإضافات والتعديلات والأحجام، سلة مشتريات ذكية، تحديد خيار استلام من الفرع أو توصيل للعنوان مع اختيار الفرع الأقرب، دفع أونلاين، وحساب عميل متصل بالخريطة لتتبع حركة الطيار لحظياً.</p>
+          </div>
+        </div>
+
+        <!-- Platform 2 -->
+        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col md:flex-row gap-4 items-start">
+          <div class="p-3 bg-blue-100 text-blue-800 rounded-xl font-bold shrink-0 flex items-center gap-2 md:w-48">
+            <i data-lucide="monitor" class="w-5 h-5 shrink-0"></i>
+            <span>2. كاشير الـ POS</span>
+          </div>
+          <div class="space-y-1 text-slate-600 leading-relaxed">
+            <div class="font-bold text-slate-900">برنامج الكاشير ونقاط البيع (Desktop & Tablet App)</div>
+            <p>شاشة بيع صاروخية تدعم اللمس السريع للكاشير، تعديل وإلغاء وتطبيق خصومات، إدارة أوردرات الصالة (Dine-in) والتيك أواي والدليفري، استقبال طلبات الموقع والتليفون في شاشة واحدة، طباعة فورية على الطابعات الحرارية، إمكانية تشغيل أكثر من كاشير في نفس الوقت على نفس الفرع، ومعمارية أوفلاين كاملة تضمن استمرار البيع والطباعة في حال انقطاع الإنترنت مع مزامنة ذاتية فورية.</p>
+          </div>
+        </div>
+
+        <!-- Platform 3 -->
+        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col md:flex-row gap-4 items-start">
+          <div class="p-3 bg-amber-100 text-amber-800 rounded-xl font-bold shrink-0 flex items-center gap-2 md:w-48">
+            <i data-lucide="chef-hat" class="w-5 h-5 shrink-0"></i>
+            <span>3. شاشة المطبخ (KDS)</span>
+          </div>
+          <div class="space-y-1 text-slate-600 leading-relaxed">
+            <div class="font-bold text-slate-900">نظام إدارة طلبات المطبخ الذكي (Kitchen Display System)</div>
+            <p>شاشة تفاعلية للمطبخ تعرض الأوردرات أولاً بأول حسب أولوية الدخول، ألوان توضيحية لحالة كل طلب (جديد، قيد التحضير، جاهز للتسليم)، تلوين وتنبيه للأوردرات المتأخرة، إمكانية تقسيم الأصناف على شاشات الأقسام المختلفة داخل المطبخ، وتحديث فوري لحالة الأوردر عند الكاشير وعلى شاشة تتبع العميل بمجرد انتهاء الشيف بلمسة واحدة.</p>
+          </div>
+        </div>
+
+        <!-- Platform 4 -->
+        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col md:flex-row gap-4 items-start">
+          <div class="p-3 bg-emerald-100 text-emerald-800 rounded-xl font-bold shrink-0 flex items-center gap-2 md:w-48">
+            <i data-lucide="bike" class="w-5 h-5 shrink-0"></i>
+            <span>4. تطبيق الطيار والدليفري</span>
+          </div>
+          <div class="space-y-1 text-slate-600 leading-relaxed">
+            <div class="font-bold text-slate-900">تطبيق الموبايل لأسطول التوصيل (Flutter Mobile App)</div>
+            <p>تطبيق موبايل مخصص لمندوبي التوصيل (Android & iOS)، يستقبل الطيار من خلاله إشعاراً بالأوردر مع العنوان ورقم العميل وموقعه على الخريطة، توجيه ملاحة فوري، زر تأكيد استلام من المطعم وزر تأكيد تسليم للعميل، تسجيل وتوريد مبالغ الكاش المحصلة، وبث حي ومستمر لموقع الطيار بالـ GPS في الخلفية ليتابعه العميل وإدارة المطعم لحظة بلحظة، مع دعم تعدد الطيارين في نفس الوقت.</p>
+          </div>
+        </div>
+
+        <!-- Platform 5 -->
+        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col md:flex-row gap-4 items-start">
+          <div class="p-3 bg-purple-100 text-purple-800 rounded-xl font-bold shrink-0 flex items-center gap-2 md:w-48">
+            <i data-lucide="pie-chart" class="w-5 h-5 shrink-0"></i>
+            <span>5. لوحة الإدارة والمخازن</span>
+          </div>
+          <div class="space-y-1 text-slate-600 leading-relaxed">
+            <div class="font-bold text-slate-900">لوحة التحكم السحابية والـ ERP المركزي (Cloud Admin & Inventory)</div>
+            <p>متابعة حركة الطلبات لحظياً في كافة الفروع، تسجيل أوردرات الكول سنتر يدوياً، إدارة المنيو والأسعار والإضافات والعروض بلا حدود، إضافة فروع جديدة، إدارة الموظفين وصلاحيات الأدوار بدقة (مدير عام، كاشير، شيف، مسؤول مخزن). كما تشمل موديول كتاب الوصفات وربط كل وجبة بمكوناتها الخام وخصم المخزون أوتوماتيكياً مع كل أوردر، تنبيهات نقص الخامات، وحساب تكلفة الوجبات وهوامش الربح وتقارير الربحية التفصيلية.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 5: Cost & Duration Estimation (بناءً على كلامنا سوا) -->
+    <section class="relative z-10 space-y-5">
+      <div class="flex items-center justify-between gap-2 border-r-4 border-orange-600 pr-3">
+        <h2 class="text-slate-900 font-black text-lg sm:text-xl">
+          5. تقدير التكلفة والمدة وإحنا بنحسبها إزاي (بناءً على كلامنا سوا)
+        </h2>
+        <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-orange-100 text-orange-900 border border-orange-200 shrink-0 whitespace-nowrap">
+          بكل صراحة وأخوية ⭐
+        </span>
+      </div>
+
+      <!-- Conversational intro card -->
+      <div class="p-5 bg-orange-50/40 border border-orange-200 rounded-2xl space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+        <p>
+          بص يا هندسة، أنا كان ممكن أرمي لك رقم إجمالي (Bulk) وخلاص وأقولك المشروع ده يكلف كذا وتتصرف، لكن عشان بنتعامل بأخوية وبصراحة وأنا والله حابب أشتغل معاك ونعمل شغل هندسي محترم يشرفنا سوا ويبقى نموذج ناجح في قطاع المطاعم، حبيت أقولك إحنا بنحسبها إزاي من جوة والتكلفة بتمشي إزاي، عشان تكون شايف كل حاجة بوضوح.
+        </p>
+        <p>
+          مشروع بالحجم ده (فيه موقع ويب تفاعلي للعميل، برنامج ديسك توب وتابلت للكاشير يدعم الأوفلاين، شاشة تفاعلية للمطبخ KDS، تطبيق موبايل أصيل للطيار بالـ GPS، موديول مخازن ووصفات متقدم، وإدارة كاملة للمبيعات والأرباح)، مستحيل يخلصه مبرمج واحد أو اتنين في شهر. ده مشروع محتاج تيم متكامل ومكرس من 4 مهندسين متخصصين:
+        </p>
+      </div>
+
+      <!-- 4 Team Members Role Breakdown -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+        
+        <!-- Member 1: Senior Backend Architect -->
+        <div class="p-4 bg-white border border-slate-200 rounded-xl shadow-sm space-y-2 flex flex-col justify-between">
+          <div class="space-y-1">
+            <div class="flex items-center justify-between gap-1 border-b border-slate-200 pb-2">
+              <span class="font-bold text-slate-900 text-xs">مهندس سينيور باك إند</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-orange-100 text-orange-800">Backend Architect</span>
+            </div>
+            <p class="text-[11px] text-slate-500 leading-relaxed pt-1">
+              معمارية قاعدة البيانات العلائقية، محرك كتاب الوصفات والخصم اللحظي للمخزون، APIs الفروع، ومحرك الـ WebSockets اللحظي.
+            </p>
+          </div>
+          <div class="pt-2 border-t border-slate-100">
+            <span class="text-[11px] text-slate-600 font-semibold">بناء المنظومة المركزية والأمان</span>
+          </div>
+        </div>
+
+        <!-- Member 2: Senior Flutter (POS & Desktop Engine) -->
+        <div class="p-4 bg-white border border-slate-200 rounded-xl shadow-sm space-y-2 flex flex-col justify-between">
+          <div class="space-y-1">
+            <div class="flex items-center justify-between gap-1 border-b border-slate-200 pb-2">
+              <span class="font-bold text-slate-900 text-xs">مهندس سينيور فلاتر</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800">Flutter POS & Sync</span>
+            </div>
+            <p class="text-[11px] text-slate-500 leading-relaxed pt-1">
+              بناء برنامج الكاشير للديسك توب والتابلت، معمارية الـ Offline-First وقاعدة بيانات SQLite المحلية، ومحرك المزامنة التلقائية والطباعة الحرارية.
+            </p>
+          </div>
+          <div class="pt-2 border-t border-slate-100">
+            <span class="text-[11px] text-slate-600 font-semibold">مسؤول الـ POS والـ Offline</span>
+          </div>
+        </div>
+
+        <!-- Member 3: Mobile Engineer (Driver App & GPS) -->
+        <div class="p-4 bg-white border border-slate-200 rounded-xl shadow-sm space-y-2 flex flex-col justify-between">
+          <div class="space-y-1">
+            <div class="flex items-center justify-between gap-1 border-b border-slate-200 pb-2">
+              <span class="font-bold text-slate-900 text-xs">مهندس موبايل فلاتر</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Driver & Maps</span>
+            </div>
+            <p class="text-[11px] text-slate-500 leading-relaxed pt-1">
+              تطبيق الطيار (Android & iOS)، خدمة الـ GPS بالخلفية، شاشات استلام وتسليم وتوريد الكاش، والخرائط الحية.
+            </p>
+          </div>
+          <div class="pt-2 border-t border-slate-100">
+            <span class="text-[11px] text-slate-600 font-semibold">تطبيق الدليفري والـ GPS</span>
+          </div>
+        </div>
+
+        <!-- Member 4: Frontend Engineer (Web Ordering & Admin) -->
+        <div class="p-4 bg-white border border-slate-200 rounded-xl shadow-sm space-y-2 flex flex-col justify-between">
+          <div class="space-y-1">
+            <div class="flex items-center justify-between gap-1 border-b border-slate-200 pb-2">
+              <span class="font-bold text-slate-900 text-xs">مهندس فرونت إند ويب</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-800">Next.js & Admin</span>
+            </div>
+            <p class="text-[11px] text-slate-500 leading-relaxed pt-1">
+              موقع العميل التفاعلي بالأنيميشن والوضع الليلي، شاشة المطبخ KDS التفاعلية، ولوحة التحكم السحابية لإدارة المطاعم والمخازن.
+            </p>
+          </div>
+          <div class="pt-2 border-t border-slate-100">
+            <span class="text-[11px] text-slate-600 font-semibold">تجربة الويب والشاشات السحابية</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Real Delivery Truth & Duration Breakdown -->
+      <div class="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-3 text-xs leading-relaxed text-slate-700">
+        <div class="font-bold text-slate-900 text-xs sm:text-sm flex items-center gap-2">
+          <i data-lucide="clock" class="w-4 h-4 text-orange-600"></i>
+          نقطة هامة بخصوص مدة التنفيذ (الجدول الزمني الواقعي):
+        </div>
+        <p>
+          مشروع بالضخامة دي بيشمل 5 منصات مختلفة في نفس الوقت، عشان يطلع مستقر وخالي من العيوب، <strong>المدة الزمنية المقدرة لتنفيذه هي 75 يوم عمل فيما فوق</strong> (حوالي شهرين ونص إلى 3 شهور عمل مكثف). 
+        </p>
+        <p>
+          المدة دي بتتحدد وتتحرك بناءً على عدة عوامل هندسية واقعية:
+        </p>
+        <ul class="list-disc list-inside space-y-1 text-slate-600 pr-2">
+          <li><strong>جاهزية ملفات التصميم (UI/UX Design):</strong> هل التصميمات جاهزة بالكامل أم سيتم تصميمها وبناؤها من الصفر واعتمادها شاشة بشاشة؟</li>
+          <li><strong>حجم التفاصيل والـ Features الفرعية:</strong> مثل تعدد أقسام المطبخ، شروط العروض والكوبونات، وتفاصيل بوابات الدفع البنكية.</li>
+          <li><strong>مرحلة الاختبارات الهندسية الصارمة (Stress & Offline Testing):</strong> إحنا بنقفل على نفسنا ونجرب سيناريوهات قطع النت المفاجئ، طباعة الفواتير في بيئة العمل الواقعية، وتتبع إشارات الـ GPS لضمان أعلى استقرار قبل التسليم.</li>
+        </ul>
+      </div>
+
+      <!-- Final Friendly Closing Box with the EXPLICIT BULK OFFER -->
+      <div class="p-5 bg-gradient-to-r from-orange-50 to-amber-50 border-2 border-orange-400 rounded-2xl space-y-4 text-xs sm:text-sm text-slate-800 leading-relaxed shadow-sm">
+        <div class="flex items-center gap-2 font-black text-orange-950 text-base">
+          <i data-lucide="handshake" class="w-5 h-5 text-orange-600"></i>
+          الخلاصة وتقدير التكلفة الإجمالي (The Bulk Estimation):
+        </div>
+        
+        <p class="text-sm text-slate-800 leading-relaxed">
+          عشان كده صراحة يا هندسة وبدون أي لف ولا مبالغات الشركات الكبيرة: <br>
+          <span class="inline-block mt-2 bg-orange-200/70 border border-orange-300 px-3 py-1.5 rounded-xl text-orange-950 font-black text-base sm:text-lg">
+            الأوفر الإجمالي لتنفيذ المنظومة بالكامل بكل أركانها الخمسة هيكون في رينج من 2,500$ إلى 3,000$ دولار.
+          </span>
+        </p>
+        
+        <p class="text-xs text-slate-700 leading-relaxed">
+          الرقم ده هو التقدير الهندسي المنطقي اللي هيخلي تيم المتخصصين يتفرغوا تماماً للمشروع، ويطلعوا لك منظومة قوية ومستقرة تشيل ضغط مبيعات حقيقي وتعيش مع المطعم لسنين بدون ما تحتاج تعيد برمجتها أو تعاني من أعطال في وقت الذروة.
+        </p>
+
+        <p class="font-bold text-slate-900 text-xs sm:text-sm">
+          أنا والله حابب أشتغل معاك ونعمل مع بعض حاجة مشرفة جداً. شوف وقارن الدنيا، وفكر براحتك، وكلمني في أي وقت على واتساب وندردش ونرتب الخطوات ونتوكل على الله!
+        </p>
+        
+        <div class="pt-2">
+          <a href="https://wa.me/201275566392?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D9%85.%20%D9%85%D8%AD%D9%85%D8%AF%D8%8C%20%D8%A7%D8%B7%D9%84%D8%B9%D8%AA%20%D8%B9%D9%84%D9%89%20%D8%AE%D8%B7%D8%A9%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%20%D9%88%D8%AA%D9%82%D8%AF%D9%8A%D8%B1%20%D9%85%D9%86%D8%B8%D9%88%D9%85%D8%A9%20%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B9%D9%85%20%D9%88%D8%A7%D9%84%D9%80%20POS%20(2.5k%20-%203k)%D8%8C%20%D9%88%D8%AC%D8%A7%D9%87%D8%B2%D9%8A%D9%86%20%D9%86%D8%AA%D9%81%D9%82%20%D9%88%D9%86%D8%A8%D8%AF%D8%A1." 
+             target="_blank"
+             class="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-md transition transform hover:-translate-y-0.5">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>دردش مع م. محمد ونتفق على الخطوة الجاية</span>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Section 6: Guarantees & Ownership -->
+    <section class="relative z-10 space-y-4">
+      <div class="flex items-center gap-2 text-slate-900 font-bold text-lg border-r-4 border-orange-600 pr-3">
+        <span>6. الضمان وحقوق الملكية وتسليم الشغل</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+        
+        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+          <div class="font-bold text-slate-900 flex items-center gap-2">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+            السورس كود ملكك 100%
+          </div>
+          <p class="text-slate-600 leading-relaxed text-xs">
+            بنسلمك السورس كود الكامل لكافة المنصات (الويب، وتطبيق الطيار، وبرنامج الكاشير، والباك إند وقاعدة البيانات) بدون أي حجب أو احتكار أو اشتراكات مخفية.
+          </p>
+        </div>
+
+        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+          <div class="font-bold text-slate-900 flex items-center gap-2">
+            <i data-lucide="shield" class="w-4 h-4 text-orange-600"></i>
+            ضمان ودعم فني بعد الإطلاق
+          </div>
+          <p class="text-slate-600 leading-relaxed text-xs">
+            فترة ضمان ودعم فني مجاني بعد التشغيل لمتابعة الأداء العملي في المطعم والتأكد من استقرار المزامنة وحل أي ملاحظات فوراً.
+          </p>
+        </div>
+
+        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+          <div class="font-bold text-slate-900 flex items-center gap-2">
+            <i data-lucide="upload-cloud" class="w-4 h-4 text-blue-600"></i>
+            تجهيز السيرفرات والمتاجر
+          </div>
+          <p class="text-slate-600 leading-relaxed text-xs">
+            بنجهز لك السيرفر السحابي، قواعد البيانات، رفع تطبيق الطيار على Google Play و App Store، وتسطيب برامج الكاشير على أجهزتكم.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Document Footer / Call To Action -->
+    <footer class="relative z-10 border-t-2 border-slate-900 pt-6 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-slate-600">
+        <div>
+          <div class="font-bold text-slate-900 text-sm">م. محمد حسين — LogicCraft</div>
+          <div>استشاري تطوير التطبيقات والحلول السحابية ومهندس معماريات البرمجيات</div>
+          <div>البريد الإلكتروني: <span class="font-latin text-slate-900 font-semibold" dir="ltr">mohamedelsayedhussien@gmail.com</span></div>
+        </div>
+        <div class="text-right">
+          <div class="font-bold text-slate-900">للتواصل المباشر عبر WhatsApp:</div>
+          <a href="https://wa.me/201275566392" target="_blank" class="font-latin font-bold text-orange-600 hover:text-orange-700 text-sm inline-block mt-0.5" dir="ltr">
+            +20 127 556 6392
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center text-[11px] text-slate-400 pt-3 border-t border-slate-200 font-latin">
+        © 2026 LogicCraft & Eng. Mohamed Hussien. All Rights Reserved.
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Prevent inspection shortcuts
+    document.addEventListener('keydown', function (e) {
+      if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'C'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) || (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) || (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0))) {
+        e.preventDefault();
+        return false;
+      }
+    });
+  </script>
+</body>
+</html>
